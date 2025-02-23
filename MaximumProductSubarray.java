@@ -1,5 +1,12 @@
 public class MaximumProductSubarray {
 
+    /*
+    * Input: nums = [2,3,-2,4]
+    * Output: 6
+    * Explanation: [2,3] has the largest product 6.
+    *
+    * Solution: Calculate prefix product and suffix product and take max
+    * */
     public static void main(String[] args) {
         int[] numbers = {-2,0,-1};
         int product = maxProduct(numbers);
