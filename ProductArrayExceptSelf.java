@@ -6,6 +6,7 @@ public class ProductArrayExceptSelf {
         for (int i = 0; i < numbers.length; i++) {
             System.out.println(numbers[i] + " : "+products[i]);
         }
+
     }
 
     public static int[] productExceptSelf(int[] nums) {
