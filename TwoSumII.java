@@ -3,23 +3,21 @@ import java.util.Arrays;
 public class TwoSumII {
 
     public static void main(String[] args) {
-        int[] numbers = {-5,-3,0,2,4,6,8}; int target = 5;
+        int[] numbers = {1, 2, 3, 4}; int target = 3;
         int[] result = twoSum(numbers, target);
         System.out.println(Arrays.toString(result));
     }
-    // -3,3,4,90 | target = 0
-    //  ^
-    //    ^
     private static int[] twoSum(int[] numbers, int target) {
         int i = 0, j = numbers.length - 1;
         while(i < j) {
-            int sum = numbers[i] + numbers[j];
-            if(sum > target)
-                j--;
-            else if(sum < target)
-                i++;
-            else
+            if(numbers[i] + numbers[j] == target)
                 return new int[] {i+1, j+1};
+            while (numbers[i] + numbers[j] > target) {
+                j--;
+            }
+            while(numbers[i] + numbers[j] < target) {
+                i++;
+            }
         }
         return new int[]{};
     }
