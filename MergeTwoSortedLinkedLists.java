@@ -25,13 +25,12 @@ public class MergeTwoSortedLinkedLists {
         while (list1 != null && list2 != null) {
             if(list1.val < list2.val){
                 tailNode.next = list1;
-                tailNode = tailNode.next;
                 list1 = list1.next;
             } else {
                 tailNode.next = list2;
-                tailNode = tailNode.next;
                 list2 = list2.next;
             }
+            tailNode = tailNode.next;
         }
         while(list1 != null){
             tailNode.next = list1;
